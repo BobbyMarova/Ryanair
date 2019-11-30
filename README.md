@@ -15,5 +15,9 @@ Here is a recording of the script in action:
 
 https://www.youtube.com/watch?v=hlxWJU7PwYI
 
+P.S. I have used a temporary email to set up an account for testing.
+Now it gives me a different message at the end, but that's not a part of the scope of the test. I assume that you can reset initial conditions.
+
+
 
  
