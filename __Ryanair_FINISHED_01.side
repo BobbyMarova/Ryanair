@@ -241,6 +241,13 @@
       "targets": [],
       "value": "check"
     }, {
+      "id": "7c3380f4-3846-43b6-a4d1-968890bc63f2",
+      "comment": "",
+      "command": "echo",
+      "target": "${check}",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "9cf5cb14-f3bc-474c-a8ca-aa82a3b38e77",
       "comment": "",
       "command": "if",
@@ -684,12 +691,9 @@
     }, {
       "id": "5cd3b7c5-9faf-43c1-aad6-d15a3d7e3647",
       "comment": "",
-      "command": "click",
+      "command": "//click",
       "target": "css=.\\_select--on",
-      "targets": [
-        ["css=.\\_select--on", "css:finder"],
-        ["xpath=//div/ry-select/div/div/div/select", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "f42dd2c2-c56b-42fc-a7d4-d9f082f2f1a7",
