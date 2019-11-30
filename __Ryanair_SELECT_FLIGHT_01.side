@@ -1,0 +1,157 @@
+{
+  "id": "a11c8b40-1aae-439d-a880-64e496c72fd8",
+  "version": "2.0",
+  "name": "Ryanair",
+  "url": "https://www.ryanair.com/us/en/",
+  "tests": [{
+    "id": "23e75ae3-1e4a-4096-a952-54a9d444734e",
+    "name": "Booking",
+    "commands": [{
+      "id": "2096849e-da96-40b8-8302-2fee24ea3ee1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ryanair.com/us/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74881482-10f1-40c5-b6fc-5b74d96a76f0",
+      "comment": "Select destination airport",
+      "command": "type",
+      "target": "xpath=//div[@id='search-container']/div/div/div/form/div[2]/div/div/div[3]/div[2]/div[2]/div/div/input",
+      "targets": [
+        ["css=.disabled-wrap > .ng-dirty", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='search-container']/div/div/div/form/div[2]/div/div/div[3]/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "Sofia"
+    }, {
+      "id": "94ace890-2e17-49e4-82de-966f3a750693",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//span[contains(.,'Continue')]",
+      "targets": [],
+      "value": "statusOK"
+    }, {
+      "id": "51d9f62f-bba6-4698-9129-f882c72599ec",
+      "comment": "",
+      "command": "//if",
+      "target": "${statusOK}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faf406da-66eb-422d-b8b2-0c3f3cabb8a9",
+      "comment": "Click continue",
+      "command": "//click",
+      "target": "xpath=//span[contains(.,'Continue')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68151b38-71dd-45f5-af55-a2d4d2a841fb",
+      "comment": "",
+      "command": "//end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90a8376b-47f3-431b-95b2-01b611a3a08e",
+      "comment": "",
+      "command": "//sendKeys",
+      "target": "",
+      "targets": [],
+      "value": "${KEY_ENTER}\\"
+    }, {
+      "id": "fe08a1f9-5cf1-46fc-a5ca-17c3d568f21a",
+      "comment": "Screen 1.5.",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f400d64d-fe82-4093-80ab-320c8bb38be6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//div[@id='search-container']/div/div/div/form/div[2]/div/div/div[3]/div[2]/div[2]/div/div/input",
+      "targets": [],
+      "value": "${KEY_TAB}"
+    }, {
+      "id": "8355403b-e6f2-4274-b096-8ddca21fcceb",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "name=dateInput0",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "8b2bc5c7-93c3-4711-8891-c099594332c7",
+      "comment": "Type start date",
+      "command": "type",
+      "target": "name=dateInput0",
+      "targets": [
+        ["name=dateInput0", "name"],
+        ["css=.ng-touched", "css:finder"],
+        ["xpath=//input[@name='dateInput0']", "xpath:attributes"],
+        ["xpath=//div[@id='row-dates-pax']/div/div/div/div/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "01/${KEY_BKSP}${KEY_BKSP}02/${KEY_BKSP}${KEY_BKSP}2020"
+    }, {
+      "id": "8c2ed671-0bf0-4755-88a6-43d62bf4bab4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//smart-search/div/div[2]/div[1]/div[1]/div/form/div[2]/div[2]/div[1]/div/div[2]/div/div[2]/div[2]/div/input[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e177a05b-16fa-4800-aacd-4490c20c1205",
+      "comment": "Type end date",
+      "command": "type",
+      "target": "xpath=//smart-search/div/div[2]/div[1]/div[1]/div/form/div[2]/div[2]/div[1]/div/div[2]/div/div[2]/div[2]/div/input[1]",
+      "targets": [
+        ["css=.disabled-wrap > .ng-pristine:nth-child(2)", "css:finder"],
+        ["xpath=(//input[@name='dateInput0'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='row-dates-pax']/div/div/div[2]/div/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "04/${KEY_BKSP}${KEY_BKSP}02/${KEY_BKSP}${KEY_BKSP}2020"
+    }, {
+      "id": "8f9cbb5f-a889-4d82-9f46-161af5c05217",
+      "comment": "Agree to the terms and conditions",
+      "command": "click",
+      "target": "css=.terms-conditions-checkbox-span",
+      "targets": [
+        ["css=.terms-conditions-checkbox-span", "css:finder"],
+        ["xpath=//div[@id='search-container']/div/div/div/div/div[2]/div/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e169c4e3-897f-4053-94ee-5f5765028da0",
+      "comment": "Click let's go",
+      "command": "click",
+      "target": "xpath=//div[@id='search-container']/div/div/div/form/div[4]/button[2]/span",
+      "targets": [
+        ["css=.core-btn-primary:nth-child(2) > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='search-container']/div/div/div/form/div[4]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "322bb12a-02d7-41a7-871b-b9b625eda540",
+      "comment": "Since typing dates does not work pass them in URL, allow enough time ",
+      "command": "open",
+      "target": "https://www.ryanair.com/us/en/trip/flights/select?ADT=1&CHD=0&DateIn=2020-02-04&DateOut=2020-02-01&Destination=SOF&FlexDaysIn=6&FlexDaysOut=6&INF=0&Origin=DUB&RoundTrip=true&TEEN=0&domestic=false&isConnectedFlight=false&isSpanishDiscount=false&promoCode=&tpAdults=1&tpChildren=0&tpDestinationIata=SOF&tpDiscount=0&tpEndDate=2020-02-04&tpInfants=0&tpIsConnectedFlight=false&tpIsReturn=true&tpOriginIata=DUB&tpPromoCode=&tpStartDate=2020-02-01&tpTeens=0",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f15ff0c4-e4ba-445e-b10f-b1bb64e5cb20",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["23e75ae3-1e4a-4096-a952-54a9d444734e"]
+  }],
+  "urls": ["https://www.ryanair.com/us/en/"],
+  "plugins": []
+}

@@ -1,0 +1,809 @@
+{
+  "id": "a11c8b40-1aae-439d-a880-64e496c72fd8",
+  "version": "2.0",
+  "name": "Ryanair",
+  "url": "https://www.ryanair.com/us/en/",
+  "tests": [{
+    "id": "23e75ae3-1e4a-4096-a952-54a9d444734e",
+    "name": "Booking",
+    "commands": [{
+      "id": "322bb12a-02d7-41a7-871b-b9b625eda540",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.ryanair.com/us/en/trip/flights/select?ADT=1&CHD=0&DateIn=2020-02-04&DateOut=2020-02-01&Destination=SOF&FlexDaysIn=6&FlexDaysOut=6&INF=0&Origin=DUB&RoundTrip=true&TEEN=0&domestic=false&isConnectedFlight=false&isSpanishDiscount=false&promoCode=&tpAdults=1&tpChildren=0&tpDestinationIata=SOF&tpDiscount=0&tpEndDate=2020-02-04&tpInfants=0&tpIsConnectedFlight=false&tpIsReturn=true&tpOriginIata=DUB&tpPromoCode=&tpStartDate=2020-02-01&tpTeens=0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9f838d5-d84e-44ec-adaa-85a13c7addc5",
+      "comment": "Select source flight",
+      "command": "click",
+      "target": "xpath=//flight-card/div/button",
+      "targets": [
+        ["css=.ng-tns-c25-14 .card-header", "css:finder"],
+        ["xpath=//flight-card/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b142dba1-297a-443a-aa47-4d8b2a6d6c6e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(.,'Continue with Standard fare')]",
+      "targets": [
+        ["css=div:nth-child(11)", "css:finder"],
+        ["xpath=//div[11]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "2ff3a8dd-327c-450c-8558-d4b23c39a46e",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba7e443a-69bf-4a05-aa64-998fdbd73754",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad0eac30-82b2-4c61-9ece-27815471f5fa",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bb99c94-0dd1-4131-b7c5-d53be9c0014d",
+      "comment": "Select fare",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Continue with Standard fare')]",
+      "targets": [
+        ["css=.fare-card__button--selected > .ng-star-inserted", "css:finder"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Continue with Standard fare')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ffc6a9-80ee-4f3a-bc4e-d22c007931b5",
+      "comment": "",
+      "command": "//waitForElementNotPresent",
+      "target": "xpath=//span[contains(.,'Continue with Standard fare')]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "1a37b8e0-c466-4592-93e7-21ee3e0b1b94",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a6c0d5e-64a0-4208-b726-e23b1e705e3d",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2eda13a-43de-46e1-9a40-2fc6ddc3d139",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "704f8b6f-e47d-4459-b5cf-b00ed1147057",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "xpath=//flights-summary-container/flights-summary/div/div[2]/journey-container/journey/flight-list/div/flight-card/div/button",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "34c09fa9-b709-4e14-92a8-16c751cd7da9",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa1c7ae5-549c-4939-8b3c-2e9a1b4e161e",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a33b92e7-7e67-42bd-93d3-ae2ab8ddadd8",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2265a26d-3fec-49e4-89f9-66594caabbe6",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42c417e0-dd3e-4470-ae93-f29b351c4316",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db08672f-7e20-4e7a-a873-b9277f73ce42",
+      "comment": "Select return flight",
+      "command": "click",
+      "target": "xpath=//flights-summary-container/flights-summary/div/div[2]/journey-container/journey/flight-list/div/flight-card/div/button",
+      "targets": [
+        ["css=.ng-tns-c25-12 .card-info", "css:finder"],
+        ["xpath=//div[2]/journey-container/journey/flight-list/div/flight-card/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43f83a11-c589-4a43-a2c3-f68a44cc11a7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//span[contains(.,'Continue with Standard fare')]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "d729a817-b705-4504-9d15-09913f33cb71",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe32e6b8-b239-4d49-8574-b8feaf313732",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3673ea38-8c6a-4bf0-bc6f-e6bdcce63a18",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a08936b-d008-435e-b32e-491fbdb7031e",
+      "comment": "",
+      "command": "//waitForElementEditable",
+      "target": "xpath=//span[contains(.,'Continue with Standard fare')]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "12706b5a-2ec9-4f0c-97e7-2562b3326936",
+      "comment": "Select fare",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Continue with Standard fare')]",
+      "targets": [
+        ["css=div:nth-child(9)", "css:finder"],
+        ["xpath=//div[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ce4aae2-2903-41fb-abc3-ed9345937c3c",
+      "comment": "Click continue",
+      "command": "//click",
+      "target": "xpath=//button[contains(.,'Continue')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ed77d17-4a2f-4f3e-9c8b-de0ae99c0205",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//continue-flow/div/div/button",
+      "targets": [
+        ["css=.continue-flow__button", "css:finder"],
+        ["xpath=//continue-flow/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "c6bb5297-db3f-46a8-b77c-7ede9cd5260f",
+      "comment": "Click continue",
+      "command": "click",
+      "target": "css=.continue-flow__button",
+      "targets": [
+        ["css=.continue-flow__button", "css:finder"],
+        ["xpath=//continue-flow/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2789781-7b18-4418-ab20-0d89fc78039f",
+      "comment": "Screen 2.",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8b196d1-e84c-4233-95ff-e65490f25a93",
+      "comment": "",
+      "command": "//verifyElementPresent",
+      "target": "xpath=//p[contains(.,'Add passengers')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cc0c338-7374-4199-8e59-6130ac365b3e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ((document.documentElement.textContent || document.documentElement.innerText).indexOf('You don’t have any saved companions for adults') > -1) ? true : false;",
+      "targets": [],
+      "value": "check"
+    }, {
+      "id": "9cf5cb14-f3bc-474c-a8ca-aa82a3b38e77",
+      "comment": "",
+      "command": "if",
+      "target": "${check}==true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5a9a69b-36fd-43c9-8d5b-04b15a1ad405",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bubble__outline svg",
+      "targets": [
+        ["css=.bubble__outline svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fe2d1d8-d5c6-4067-adf9-fb31d83d8e78",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91147b60-7bdd-46a1-a42d-e816e0ef33fc",
+      "comment": "Mrs",
+      "command": "click",
+      "target": "css=.ng-star-inserted:nth-child(2) > .ry-radio-button__label",
+      "targets": [
+        ["css=.ng-star-inserted:nth-child(2) > .ry-radio-button__label", "css:finder"],
+        ["xpath=//ry-radio-button[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mrs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7114ea78-1ff5-4c2f-99a0-3ef665c19394",
+      "comment": "",
+      "command": "click",
+      "target": "id=formState.passengers.ADT-0.name",
+      "targets": [
+        ["id=formState.passengers.ADT-0.name", "id"],
+        ["name=formState.passengers.ADT-0.name", "name"],
+        ["css=#formState\\.passengers\\.ADT-0\\.name", "css:finder"],
+        ["xpath=//input[@id='formState.passengers.ADT-0.name']", "xpath:attributes"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbf9da56-c73d-46bd-9cfc-33551c8ba3cf",
+      "comment": "",
+      "command": "type",
+      "target": "id=formState.passengers.ADT-0.name",
+      "targets": [
+        ["id=formState.passengers.ADT-0.name", "id"],
+        ["name=formState.passengers.ADT-0.name", "name"],
+        ["css=#formState\\.passengers\\.ADT-0\\.name", "css:finder"],
+        ["xpath=//input[@id='formState.passengers.ADT-0.name']", "xpath:attributes"],
+        ["xpath=//span[2]/input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "41fb3b80-ce30-4e42-8cc3-aa9b192d7c90",
+      "comment": "",
+      "command": "click",
+      "target": "id=formState.passengers.ADT-0.surname",
+      "targets": [
+        ["id=formState.passengers.ADT-0.surname", "id"],
+        ["name=formState.passengers.ADT-0.surname", "name"],
+        ["css=#formState\\.passengers\\.ADT-0\\.surname", "css:finder"],
+        ["xpath=//input[@id='formState.passengers.ADT-0.surname']", "xpath:attributes"],
+        ["xpath=//ry-input[2]/label/span[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49dbf9de-c3e3-40eb-86a7-25d24f5e8b56",
+      "comment": "",
+      "command": "type",
+      "target": "id=formState.passengers.ADT-0.surname",
+      "targets": [
+        ["id=formState.passengers.ADT-0.surname", "id"],
+        ["name=formState.passengers.ADT-0.surname", "name"],
+        ["css=#formState\\.passengers\\.ADT-0\\.surname", "css:finder"],
+        ["xpath=//input[@id='formState.passengers.ADT-0.surname']", "xpath:attributes"],
+        ["xpath=//ry-input[2]/label/span[2]/input", "xpath:position"]
+      ],
+      "value": "Passenger"
+    }, {
+      "id": "17b9db38-5391-42d5-b78e-fdac43aee333",
+      "comment": "Send enter instead of clicking continue",
+      "command": "sendKeys",
+      "target": "id=formState.passengers.ADT-0.surname",
+      "targets": [
+        ["id=formState.passengers.ADT-0.surname", "id"],
+        ["name=formState.passengers.ADT-0.surname", "name"],
+        ["css=#formState\\.passengers\\.ADT-0\\.surname", "css:finder"],
+        ["xpath=//input[@id='formState.passengers.ADT-0.surname']", "xpath:attributes"],
+        ["xpath=//ry-input[2]/label/span[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "8f4c75ec-0429-4483-bfdd-d36d470edf37",
+      "comment": "Screen 3.",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f217d40-076e-4a18-9ff7-9495b0d1545e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//button[contains(.,' Choose random allocation ')]",
+      "targets": [
+        ["css=ry-tooltip", "css:finder"],
+        ["xpath=//ry-tooltip", "xpath:position"],
+        ["xpath=//ry-tooltip[contains(.,'If you do not select a seat, each passenger will be allocated a random seat at check-in. You will only be able to check-in 48 hours in advance of both departure flights.')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "b3e9f0f1-fa0f-4086-8d79-3f03d29034f5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,' Choose random allocation ')]",
+      "targets": [
+        ["css=.ry-button", "css:finder"],
+        ["xpath=//span[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Next flight')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d936a86-bbc2-47b8-9296-1cbb50172b08",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//button[contains(.,' Choose random allocation ')]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "7f65ca92-6085-45b5-92b5-5f7b2a44b6a7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Choose random allocation')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21ccfbfa-459b-4b72-af7a-ed71d4b29e38",
+      "comment": "",
+      "command": "//waitForElementNotPresent",
+      "target": "xpath=//button[contains(.,'Choose random allocation')]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "4560ba55-e9bd-4c0a-806a-b2db64bd8830",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81913ad6-9369-476c-8fe6-bb6a2b07851a",
+      "comment": "",
+      "command": "//waitForElementPresent",
+      "target": "xpath=//p[contains(.,'Included')]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "a30ee655-7276-4a31-bf0e-04439a3a93d4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//p[contains(.,'Included')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7fa7eb66-7e36-48ee-a6d0-37cf12aabade",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Continue')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60955663-75a6-482d-8cc7-bee843181140",
+      "comment": "",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ac95b3a-9077-4d8f-bfe1-81ee31f054cd",
+      "comment": "",
+      "command": "//waitForElementPresent",
+      "target": "xpath=//button[contains(.,'Continue')]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "e6ad0562-7a60-4b14-a17b-12767acfb330",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Continue')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f74fbd89-14a1-4913-8791-5d8b17aabc5a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//ry-basket-total-container/ry-basket-total/div",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "362e1fff-92f7-4f06-a27d-b5e85f98fcec",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//ry-basket-total-container/ry-basket-total/div",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e0f2e25-a6ab-4539-8a68-d46ecd87abb1",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//button[contains(.,'Check out')]",
+      "targets": [
+        ["css=.ry-button--full", "css:finder"],
+        ["xpath=//ry-tooltip[@id='ry-tooltip-5']/div[2]/ry-price-breakdown-container/ry-price-breakdown-footer/div/div/ry-basket-continue-flow-container/ry-basket-continue-flow/button", "xpath:idRelative"],
+        ["xpath=//ry-basket-continue-flow/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check out')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "36d7c316-e15c-4f92-9f75-6c55fc2f1b0b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Check out')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9459c6a9-843a-4e31-aa15-e411562cc6df",
+      "comment": "Check if logged in",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d9edf84-8c4c-4a6f-8820-49d97a536a7e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (document.getElementsByTagName('ry-login-container').length > 0) ? true : false;",
+      "targets": [],
+      "value": "checkLogin"
+    }, {
+      "id": "e12dcf63-b091-4204-a966-f3fd223a9685",
+      "comment": "",
+      "command": "echo",
+      "target": "${checkLogin}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dd31786-7e0f-4df6-bf84-51159d192ae8",
+      "comment": "",
+      "command": "if",
+      "target": "${checkLogin}==true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c4b853d-5d17-42ba-b7b8-fd208008812a",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@name='email']",
+      "targets": [],
+      "value": "d2160530@urhen.com"
+    }, {
+      "id": "1592e19b-79e7-42bc-b6a1-ead27d869f26",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@name='password']",
+      "targets": [
+        ["css=.form__field-wrap > .ng-untouched .\\_input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//ry-portal[@id='ry-modal-portal']/div/ry-login-signup-dialog/div/ry-login-signup-container/ry-login-signup/ry-login-container/ry-form/div[2]/form/div[2]/ry-input/label/span[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/ry-input/label/span[2]/input", "xpath:position"]
+      ],
+      "value": "TestTest1"
+    }, {
+      "id": "a302d38e-7934-4b82-87e4-f8d263007249",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.form__action-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//ry-portal[@id='ry-modal-portal']/div/ry-login-signup-dialog/div/ry-login-signup-container/ry-login-signup/ry-login-container/ry-form/div[2]/form/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c4b301f-80c9-4a76-a840-b2798b43060e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f850ac7c-410b-4860-85ea-b7ddd2bf4c9d",
+      "comment": "Click pay with card",
+      "command": "click",
+      "target": "css=.\\_background--checked",
+      "targets": [
+        ["css=.\\_background--checked", "css:finder"],
+        ["xpath=//label/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "833d3586-ce9c-4579-bfb6-40c338343c82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.payment-method-section-wrapper:nth-child(1) .\\_background",
+      "targets": [
+        ["css=.payment-method-section-wrapper:nth-child(1) .\\_background", "css:finder"],
+        ["xpath=//div/div/div/div/ry-checkbox/label/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c1ed770-35c7-4247-bbdd-2947efffcf01",
+      "comment": "Card Screen",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b664035a-db63-4bd3-9d7e-a6935551ceea",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//h5[contains(.,'Pay with card')]",
+      "targets": [
+        ["css=.modal__wrapper > .section-title", "css:finder"],
+        ["xpath=//div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Pay with card')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "70eaf7eb-c1cd-422d-a5a5-51e45be4384f",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//card-details/form/ry-input[1]/label/span[2]/input",
+      "targets": [
+        ["css=.modal__input > .\\_wrapper .\\_input", "css:finder"],
+        ["xpath=(//input[@name='undefined'])[3]", "xpath:attributes"],
+        ["xpath=//form/ry-input/label/span[2]/input", "xpath:position"]
+      ],
+      "value": "5555 5555 5555 5557"
+    }, {
+      "id": "37aaa892-78ca-4898-b233-9be60682dfb4",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//card-details/form/expiry-date/label/span[2]/input",
+      "targets": [
+        ["css=.input", "css:finder"],
+        ["xpath=(//input[@type='tel'])[3]", "xpath:attributes"],
+        ["xpath=//expiry-date/label/span[2]/input", "xpath:position"]
+      ],
+      "value": "1020"
+    }, {
+      "id": "8577fa82-e955-4e03-954e-45fd9e8e7233",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//card-details/form/verification-code/div/ry-input/label/span[2]/input",
+      "targets": [],
+      "value": "265"
+    }, {
+      "id": "c8a74d89-cc7b-481a-9948-dda31e5f64e2",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//card-details/form/ry-input[2]/label/span[2]/input",
+      "targets": [],
+      "value": "Test Passenger"
+    }, {
+      "id": "60a9a7b8-5150-4647-9df9-e0a40d79f560",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//billing-address/address-form/form/ry-input[1]/label/span[2]/input",
+      "targets": [],
+      "value": "Address 1"
+    }, {
+      "id": "6db6d381-4e12-41cf-bcfd-3db5ae6301ca",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//billing-address/address-form/form/ry-input[2]/label/span[2]/input",
+      "targets": [],
+      "value": "Address 2"
+    }, {
+      "id": "4a818e6b-0ec6-409e-8d10-96a7d7d16b42",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//billing-address/address-form/form/ry-input[3]/label/span[2]/input",
+      "targets": [],
+      "value": "Dublin"
+    }, {
+      "id": "810ca79b-d267-4e8d-8a33-15e9bc95a709",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_select",
+      "targets": [
+        ["css=.\\_select", "css:finder"],
+        ["xpath=//div/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4198cd5c-9e7f-41ab-8468-77a5845af131",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_select > .ng-star-inserted:nth-child(93)",
+      "targets": [
+        ["css=.\\_select > .ng-star-inserted:nth-child(93)", "css:finder"],
+        ["xpath=(//option[@value='IE'])[2]", "xpath:attributes"],
+        ["xpath=//div/div/select/option[93]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1ac8147-be07-43ad-8510-0e0f5e90b8e0",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "xpath=//billing-address/address-form/form/ry-input[4]/label/span[2]/input",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "8029f45c-f385-40b7-b5db-fb12be6e4759",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//billing-address/address-form/form/ry-input[4]/label/span[2]/input",
+      "targets": [],
+      "value": "D22Y161"
+    }, {
+      "id": "b9a81ce8-dfda-49f9-8434-70f38778c137",
+      "comment": "Select currency",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "201a83ff-9ecf-4fb9-8e68-543186b985a7",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cd3b7c5-9faf-43c1-aad6-d15a3d7e3647",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_select--on",
+      "targets": [
+        ["css=.\\_select--on", "css:finder"],
+        ["xpath=//div/ry-select/div/div/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f42dd2c2-c56b-42fc-a7d4-d9f082f2f1a7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//option[@value='USD']",
+      "targets": [
+        ["css=.\\_select--on > .ng-star-inserted:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='USD']", "xpath:attributes"],
+        ["xpath=//div/ry-select/div/div/div/select/option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'USD ($127.61)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03fe11bb-6867-40b5-b038-79333988f9d2",
+      "comment": "Phone number",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "359883fb-2825-4768-8610-92932c346827",
+      "comment": "",
+      "command": "type",
+      "target": "css=.contact-details__input:nth-child(3) .\\_input",
+      "targets": [
+        ["css=.contact-details__input:nth-child(3) .\\_input", "css:finder"],
+        ["xpath=(//input[@name='undefined'])[2]", "xpath:attributes"],
+        ["xpath=//ry-input[2]/label/span[2]/input", "xpath:position"]
+      ],
+      "value": "123123123"
+    }, {
+      "id": "1d6386fa-d8cf-4fbc-887b-bcd8fb59f0a6",
+      "comment": "Terms and conditions",
+      "command": "//assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e87ccfd-f4bc-4038-b8f7-7f0006486094",
+      "comment": "",
+      "command": "click",
+      "target": "css=.terms-and-conditions__checkbox .\\_background",
+      "targets": [
+        ["css=.terms-and-conditions__checkbox .\\_background", "css:finder"],
+        ["xpath=//terms-and-conditions/div/div/ry-checkbox/label/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5aa0bcd-e40c-4215-b7c9-c88e2ca27532",
+      "comment": "",
+      "command": "//click",
+      "target": "xpath=//payment-form/form/div[9]/div/terms-and-conditions/div/div/ry-checkbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56f43507-b4ac-43ae-933b-c0b0145402c9",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Pay now')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7bc0223-141f-4290-a143-f3f6de35493e",
+      "comment": "",
+      "command": "//storeText",
+      "target": "xpath=//card-details/form/ry-input[1]/label/span[1]",
+      "targets": [],
+      "value": "textVar"
+    }, {
+      "id": "0c17e299-c8fc-43d3-9507-1fb44651ea17",
+      "comment": "",
+      "command": "//echo",
+      "target": "${textVar}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1422ae99-daf9-42d6-8cdd-8d722248751b",
+      "comment": "",
+      "command": "//assertText",
+      "target": "xpath=//card-details/form/ry-input[1]/label/span[1]",
+      "targets": [],
+      "value": "Please enter a valid card number"
+    }, {
+      "id": "e10004ad-8b79-4eed-abcd-98fca9a343cd",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//payment-form/form/div[6]/payment-methods/div/div/div[1]/ry-alert/div/div",
+      "targets": [],
+      "value": "textVar"
+    }, {
+      "id": "cee96a99-88de-4673-a8cc-9801fb6d2db0",
+      "comment": "",
+      "command": "echo",
+      "target": "${textVar}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "432b85bd-6c09-4f7b-91ed-07e96c9becd0",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//payment-form/form/div[6]/payment-methods/div/div/div[1]/ry-alert/div/div",
+      "targets": [],
+      "value": "Transaction could not be processed. Your payment was not authorised therefore we could not complete your booking. Please ensure that the information was correct and try again or use a new payment card."
+    }]
+  }],
+  "suites": [{
+    "id": "f15ff0c4-e4ba-445e-b10f-b1bb64e5cb20",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["23e75ae3-1e4a-4096-a952-54a9d444734e"]
+  }],
+  "urls": ["https://www.ryanair.com/us/en/"],
+  "plugins": []
+}
