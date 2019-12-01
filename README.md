@@ -1,5 +1,5 @@
 # Ryanair
-To start the project you must run the file "__Ryanair_FINISHED_01.side" in selenium IDE from your browser
+To start the project you must run the file "__Ryanair_FINISHED_01.side" in selenium IDE from your browser.
 First you need to instal Selenium IDE plugin. There  is an extension for Firefox and Chrome.
 Launch Firefox and navigate to https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/
 or use this link if you are using  Chrome
